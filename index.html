@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+
+  <link rel="shortcut icon" href="assets/img/mainlogo.png" type="image/x-icon">
+  <!-- Style -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+  <!-- Bootstrap Icon CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+
+</head>
+
+<body>
+  <section id="music-player">
+    <div class="container">
+      <div class="card mt-5 my-4 p-3" style="width: 30rem;">
+        <div class="container">
+          <div class="card-top">
+            <button>
+              <i class="bi bi-arrow-left"></i>
+            </button>
+            <h3><img src="assets/img/mainlogo.png" alt="logo-img">Playing Now</h3>
+            <button onclick="queueList()">
+              <i class="bi bi-list"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="card-img">
+          <img src="assets/img/pngegg (1).png" class="card-img-top" id="image" alt="main-img">
+        </div>
+
+        <div class="card-body text-center mt-3">
+          <h5 class="card-title">Billa Theme</h5>
+          <p class="card-text">Yuvan Shankar Raja</p>
+        </div>
+
+        <div class="card-body">
+          <div class="audio-Control">
+            <!-- <div class="song-timer">
+              <span class="current-time">0:00</span>
+              <span class="max-duration">0:00</span>
+            </div> -->
+            <audio id="main-audio" controls>
+              <source src="assets/audio/billa_theme.mp3" type="audio/mp3">
+            </audio>
+            <!-- <div class="progress-area">
+              <div class="progresss-bar">
+
+              </div>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="controls d-flex align-items-center justify-content-around">
+            <button class="btnC" id="prev" onclick="prevSong()">
+              <i class="bi bi-rewind"></i>
+            </button>
+            <button class="play-pause btnC" id="play" onclick="playPauseSong()">
+              <i class="bi bi-play-circle-fill"></i>
+            </button>
+            <button class="btnC" id="next" onclick="nextsong()">
+              <i class="bi bi-fast-forward"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="list">
+
+  </section>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+  <!-- Javascript Code Link -->
+  <script src="js/music-player.js"></script>
+</body>
+
+</html>
